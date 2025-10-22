@@ -8,7 +8,7 @@ from PIL import Image
 current_path = pathlib.Path().resolve()
 
 image_processor = os.path.join(current_path, "api/image_process", "filter") #program written in C to apply filters
-allowed_filters = ["blur", "grayscale", "sepia", "invert"]
+allowed_filters = ["blur", "grayscale", "sepia", "revert"]
 out_path = "/Users/uglyprincess/Documents/Code/Python/Filtero/backend/api/image_process/old.bmp"
 new_path = "/Users/uglyprincess/Documents/Code/Python/Filtero/backend/api/image_process/new.bmp"
 
