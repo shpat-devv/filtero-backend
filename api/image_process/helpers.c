@@ -9,7 +9,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             RGBTRIPLE current_pixel = image[h][w];
             RGBTRIPLE new_pixel;
 
-            u_int8_t avg_color_value = (current_pixel.rgbtBlue + current_pixel.rgbtGreen + current_pixel.rgbtRed) / 3;
+            BYTE avg_color_value = (current_pixel.rgbtBlue + current_pixel.rgbtGreen + current_pixel.rgbtRed) / 3;
             new_pixel.rgbtBlue = avg_color_value;
             new_pixel.rgbtGreen = avg_color_value;
             new_pixel.rgbtRed = avg_color_value;
@@ -88,7 +88,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            uint16_t avg_blue = 0, avg_green = 0, avg_red = 0;
+            DWORD avg_blue = 0, avg_green = 0, avg_red = 0;
             for (int i = 0; i < current_index; i++) {
                 RGBTRIPLE current_pixel = square[i];
                 avg_blue += current_pixel.rgbtBlue;
